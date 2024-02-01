@@ -2,6 +2,7 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework import status
 
+from api.tasks import mod_file
 from files.models import File
 from api.serializers import FileSerializer
 
@@ -12,6 +13,7 @@ class UploadFilesView(APIView):
 
         if file_serializer.is_valid():
             file_instance = file_serializer.save()
+            mod_file.apply_async(args=(file_instance.id,), countdown=0)
             return Response(file_serializer.data, status=status.HTTP_201_CREATED)
         else:
             return Response(file_serializer.errors, status=status.HTTP_400_BAD_REQUEST)

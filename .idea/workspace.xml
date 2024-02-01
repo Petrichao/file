@@ -4,26 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f9a3e1d8-bb30-4183-afee-f8fe575e9184" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/picasso_test.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back/api/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back/api/serializers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back/api/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back/files/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back/files/migrations/0002_alter_file_file.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back/files/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back/manage.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back/picasso_test/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back/picasso_test/asgi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back/picasso_test/settings.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back/picasso_test/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back/picasso_test/wsgi.py" afterDir="false" />
+    <list default="true" id="f9a3e1d8-bb30-4183-afee-f8fe575e9184" name="Changes" comment="Without celery">
+      <change afterPath="$PROJECT_DIR$/back/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back/api/tasks.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back/picasso_test/celery.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infra/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infra/docker-compose.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/api/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/api/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/back/api/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/db.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/picasso_test/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/back/picasso_test/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/picasso_test/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/back/picasso_test/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/back/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +49,8 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Django Server.picasso_test.executor": "Run",
+    "Docker.back/Dockerfile.executor": "Run",
+    "Docker.infra/docker-compose.yaml.web: Compose Deployment.executor": "Run",
     "Docker.infra/docker-compose.yaml: Compose Deployment.executor": "Run",
     "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
@@ -79,7 +75,7 @@
       <recent name="D:\Dev\picasso_test\tasks" />
     </key>
   </component>
-  <component name="RunManager" selected="Django Server.picasso_test">
+  <component name="RunManager" selected="Docker.infra/docker-compose.yaml: Compose Deployment">
     <configuration name="picasso_test" type="Python.DjangoServer" factoryName="Django server">
       <module name="picasso_test" />
       <option name="ENV_FILES" value="" />
@@ -109,6 +105,18 @@
       <deployment type="docker-compose.yml" />
       <method v="2" />
     </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
+      <deployment type="dockerfile" />
+      <method v="2" />
+    </configuration>
+    <configuration name="back/Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="sourceFilePath" value="back/Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <configuration name="infra/docker-compose.yaml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
@@ -118,9 +126,24 @@
       </deployment>
       <method v="2" />
     </configuration>
+    <configuration name="infra/docker-compose.yaml.web: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="web" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="infra/docker-compose.yaml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Docker.infra/docker-compose.yaml: Compose Deployment" />
+        <item itemvalue="Docker.infra/docker-compose.yaml.web: Compose Deployment" />
+        <item itemvalue="Docker.back/Dockerfile" />
       </list>
     </recent_temporary>
   </component>
@@ -143,11 +166,24 @@
       <workItem from="1706777283184" duration="1189000" />
       <workItem from="1706778712192" duration="79000" />
       <workItem from="1706778842995" duration="95000" />
-      <workItem from="1706778947540" duration="3058000" />
+      <workItem from="1706778947540" duration="13017000" />
     </task>
+    <task id="LOCAL-00001" summary="Without celery">
+      <option name="closed" value="true" />
+      <created>1706783199583</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1706783199583</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Without celery" />
+    <option name="LAST_COMMIT_MESSAGE" value="Without celery" />
   </component>
 </project>

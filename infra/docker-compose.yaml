@@ -1,0 +1,31 @@
+version: "3.9"
+
+services:
+  redis:
+    image: redis
+    restart: always
+
+  db:
+    image: postgres:13.0-alpine
+    volumes:
+      - data_value:/var/lib/postgresql/data/
+    env_file:
+      - ./.env
+
+  web:
+    build:
+      context: ../back
+    restart: always
+    depends_on:
+      - redis
+    ports:
+      - "8000:8000"
+
+  worker:
+    build:
+      context: ../back
+    restart: always
+    command: ["celery", "--workdir=./", "-A", "picasso_test", "worker"]
+
+volumes:
+  data_value:
