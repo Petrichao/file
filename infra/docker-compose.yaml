@@ -16,16 +16,35 @@ services:
     build:
       context: ../back
     restart: always
+    volumes:
+      - static_value:/app/static/
+      - media_value:/app/media/
     depends_on:
       - redis
-    ports:
-      - "8000:8000"
+    env_file:
+      - ./.env
+    command: bash -c ./entry_point.sh
 
   worker:
     build:
       context: ../back
     restart: always
     command: ["celery", "--workdir=./", "-A", "picasso_test", "worker"]
+    env_file:
+      - ./.env
+
+  nginx:
+    image: nginx:1.21.3-alpine
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+      - static_value:/var/html/static/
+      - media_value:/var/html/media/
+    depends_on:
+      - web
 
 volumes:
   data_value:
+  static_value:
+  media_value:

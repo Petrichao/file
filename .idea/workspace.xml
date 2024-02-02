@@ -4,20 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f9a3e1d8-bb30-4183-afee-f8fe575e9184" name="Changes" comment="Without celery">
-      <change afterPath="$PROJECT_DIR$/back/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back/api/tasks.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back/picasso_test/celery.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/infra/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/infra/docker-compose.yaml" afterDir="false" />
+    <list default="true" id="f9a3e1d8-bb30-4183-afee-f8fe575e9184" name="Changes" comment="Add celery tasks and docker-compose.yaml">
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back/entry_point.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infra/nginx/default.conf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/api/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/api/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/back/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/files_workflow.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/api/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/back/api/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/back/api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/back/api/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/db.sqlite3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/picasso_test/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/back/picasso_test/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/back/picasso_test/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/back/picasso_test/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/picasso_test/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/back/picasso_test/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/back/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/back/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/infra/.env" beforeDir="false" afterPath="$PROJECT_DIR$/infra/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/infra/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/infra/docker-compose.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +37,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
 }</component>
@@ -46,26 +49,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Django Server.picasso_test.executor": "Run",
-    "Docker.back/Dockerfile.executor": "Run",
-    "Docker.infra/docker-compose.yaml.web: Compose Deployment.executor": "Run",
-    "Docker.infra/docker-compose.yaml: Compose Deployment.executor": "Run",
-    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "D:/Dev/picasso_test/back/manage.py",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Django Server.picasso_test.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.back/Dockerfile.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.infra/docker-compose.yaml.web: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.infra/docker-compose.yaml: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Dev/K12&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Dev\picasso_test\back\api" />
@@ -102,11 +105,15 @@
       <method v="2" />
     </configuration>
     <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
-      <deployment type="docker-compose.yml" />
+      <deployment type="docker-compose.yml">
+        <settings />
+      </deployment>
       <method v="2" />
     </configuration>
     <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
-      <deployment type="dockerfile" />
+      <deployment type="dockerfile">
+        <settings />
+      </deployment>
       <method v="2" />
     </configuration>
     <configuration name="back/Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
@@ -166,7 +173,9 @@
       <workItem from="1706777283184" duration="1189000" />
       <workItem from="1706778712192" duration="79000" />
       <workItem from="1706778842995" duration="95000" />
-      <workItem from="1706778947540" duration="13017000" />
+      <workItem from="1706778947540" duration="13309000" />
+      <workItem from="1706858507133" duration="30000" />
+      <workItem from="1706859640682" duration="8801000" />
     </task>
     <task id="LOCAL-00001" summary="Without celery">
       <option name="closed" value="true" />
@@ -176,14 +185,26 @@
       <option name="project" value="LOCAL" />
       <updated>1706783199583</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Add celery tasks and docker-compose.yaml">
+      <option name="closed" value="true" />
+      <created>1706801115511</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1706801115511</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName=".env" />
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Without celery" />
-    <option name="LAST_COMMIT_MESSAGE" value="Without celery" />
+    <MESSAGE value="Add celery tasks and docker-compose.yaml" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add celery tasks and docker-compose.yaml" />
   </component>
 </project>
