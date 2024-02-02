@@ -4,20 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f9a3e1d8-bb30-4183-afee-f8fe575e9184" name="Changes" comment="Add celery tasks and docker-compose.yaml">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back/entry_point.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/infra/nginx/default.conf" afterDir="false" />
+    <list default="true" id="f9a3e1d8-bb30-4183-afee-f8fe575e9184" name="Changes" comment="Add new endpoints (download)&#10;add workflows">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/files_workflow.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/files_workflow.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/back/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/files_workflow.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/api/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/back/api/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/api/tasks.py" beforeDir="false" afterPath="$PROJECT_DIR$/back/api/tasks.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/api/tests.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/back/api/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/back/api/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/back/api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/back/api/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/files/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/back/files/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/files/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/picasso_test/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/back/picasso_test/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/back/picasso_test/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/back/picasso_test/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/back/picasso_test/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/back/picasso_test/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/back/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/infra/.env" beforeDir="false" afterPath="$PROJECT_DIR$/infra/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/infra/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/infra/docker-compose.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,7 +175,7 @@
       <workItem from="1706778842995" duration="95000" />
       <workItem from="1706778947540" duration="13309000" />
       <workItem from="1706858507133" duration="30000" />
-      <workItem from="1706859640682" duration="8801000" />
+      <workItem from="1706859640682" duration="9362000" />
     </task>
     <task id="LOCAL-00001" summary="Without celery">
       <option name="closed" value="true" />
@@ -193,7 +193,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706801115511</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Add new endpoints (download)&#10;add workflows">
+      <option name="closed" value="true" />
+      <created>1706870736861</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1706870736861</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -205,6 +213,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Without celery" />
     <MESSAGE value="Add celery tasks and docker-compose.yaml" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add celery tasks and docker-compose.yaml" />
+    <MESSAGE value="Add new endpoints (download)&#10;add workflows" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add new endpoints (download)&#10;add workflows" />
   </component>
 </project>

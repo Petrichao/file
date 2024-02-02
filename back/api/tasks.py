@@ -1,7 +1,8 @@
-from files.models import File
+import time
+
 from celery import shared_task
 
-import time
+from files.models import File
 
 
 @shared_task
