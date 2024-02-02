@@ -13,8 +13,7 @@ services:
       - ./.env
 
   web:
-    build:
-      context: ../back
+    image: petrichao/file:latest
     restart: always
     volumes:
       - static_value:/app/static/
@@ -26,8 +25,7 @@ services:
     command: bash -c ./entry_point.sh
 
   worker:
-    build:
-      context: ../back
+    image: petrichao/file:latest
     restart: always
     command: ["celery", "--workdir=./", "-A", "picasso_test", "worker"]
     env_file:
