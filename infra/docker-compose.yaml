@@ -22,7 +22,7 @@ services:
       - redis
     env_file:
       - ./.env
-    command: bash -c ./entry_point.sh
+    command: ["gunicorn", "picasso_test.wsgi:application", "--bind", "0:8000"]
 
   worker:
     image: petrichao/file:latest
