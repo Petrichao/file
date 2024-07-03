@@ -13,7 +13,7 @@ services:
       - ./.env
 
   web:
-    image: petrichao/file:latest
+    build: ../back/
     restart: always
     volumes:
       - static_value:/app/static/
@@ -25,7 +25,7 @@ services:
     command: ["gunicorn", "picasso_test.wsgi:application", "--bind", "0:8000"]
 
   worker:
-    image: petrichao/file:latest
+    build: ../back/
     restart: always
     command: ["celery", "--workdir=./", "-A", "picasso_test", "worker"]
     env_file:
